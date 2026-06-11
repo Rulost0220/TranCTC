@@ -8,6 +8,19 @@ This repository keeps only the main project workflow: data preprocessing, synthe
 - PyTorch 1.11
 - CUDA 11.3
 
+To run the traffic processing and analysis scripts, please make sure the following Python packages are installed:
+
+
+- scapy==2.6.1
+- ipaddress==1.0.23
+- numpy==1.22.4
+- pandas==2.0.3
+- scipy==1.10.1
+- scikit-learn==1.3.2
+- joblib==1.4.2
+
+These packages are mainly used for packet parsing, IP address processing, feature extraction, statistical analysis, and machine learning-based evaluation.
+
 ## 1. Data Preprocessing
 
 Main files:
