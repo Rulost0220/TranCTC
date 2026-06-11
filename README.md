@@ -1,4 +1,4 @@
-# Transformer-based NCTC Detection
+# TRANCTC: Transformer-Based IPv6 Covert Timing Channel Detection with Heterogeneous Features Fusion
 
 This repository keeps only the main project workflow: data preprocessing, synthetic data generation, Transformer training, and Transformer testing. All data paths are placeholders. Replace directories such as `*_dir` with your local paths before running the scripts.
 
