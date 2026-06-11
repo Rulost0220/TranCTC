@@ -1,6 +1,6 @@
 # TRANCTC: Transformer-Based IPv6 Covert Timing Channel Detection with Heterogeneous Features Fusion
 
-This repository keeps only the main project workflow: data preprocessing, synthetic data generation, Transformer training, and Transformer testing. All data paths are placeholders. Replace directories such as `*_dir` with your local paths before running the scripts.
+This repository keeps only the main project workflow: data preprocessing, synthetic data generation, Transformer training, and Transformer testing. Replace directories such as `*_dir` with your local paths before running the scripts.
 
 ## Experimental Environment
 
@@ -51,7 +51,7 @@ python -u data_process/nctc_interval_generate.py \
   --reference_dir ./reference_dir \
   --save_dir ./nctc_interval_dir \
   --test_dir ./test_dir \
-  --ipds_count 20000000 \
+  --ipds_count 10000 \
   --collect_reference \
   --build_flow
 ```
