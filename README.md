@@ -56,6 +56,9 @@ python -u data_process/nctc_interval_generate.py \
   --build_flow
 ```
 
+The generated `nctc_intervals` files are available at `https://huggingface.co/datasets/rulost0220/TRANCTC_NCTC_intervals`.
+
+
 If IPD files already exist, build flows under detection directly:
 
 ```bash
