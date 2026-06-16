@@ -31,7 +31,7 @@ def main(args):
 	print('-----------------------------Initial Model----------------------------')
 	ModelClass, train_fun = model_registry[args.model_type] 
 	model = ModelClass(
-		discretized_size=16,  # English note retained from the original workflow.
+		discretized_size=16,  
 		feature_dim=args.feature_dim,
 		d_model=args.d_model,
 		nhead=args.nhead,
@@ -70,7 +70,6 @@ def main(args):
 def get_args():
 	parser = argparse.ArgumentParser(description="Model training parameters")
 	
-	# English note retained from the original workflow.
 	parser.add_argument('--model_type', type=str, default='base', help='Select model architecture')
 	parser.add_argument('--is_middle', type=str2bool, help='Whether to use context information')
 	parser.add_argument('--feature_dim', type=int, default=480, help='Feature dimension')
@@ -91,21 +90,15 @@ def get_args():
 	parser.add_argument('--train_dir', type=str, default='./train_dir', help='Training data directory')
 	parser.add_argument('--val_dir', type=str, default='./val_dir', help='Validation data directory')
 	parser.add_argument('--save_dir', type=str, default=None, help='Directory for saved training outputs')
-	# English note retained from the original workflow.
 	parser.add_argument('--gpu_id', type=int, default=0, help='GPU ID to use, for example 0 means cuda:0')
 	parser.add_argument('--masked_idx', type=int, default=-1, help='masked feature')
 	args = parser.parse_args()
-	# if args.save_dir is None:
-	# 	args.save_dir = os.path.join(
-	# 		'checkpoint_dir',
-	# 		f'{args.model_type}_all_feature_is_middle{args.is_middle}_epochs{args.epochs}'
-	# 	)
+
 	if args.masked_idx != -1 and args.save_dir is not None:
 		args.save_dir = f'{args.save_dir}_masked_{args.masked_idx}'
 		args.feature_dim = args.feature_dim - 1
 
 	print("Model Checkpoint Save path",args.save_dir)
-	# English note retained from the original workflow.
 	os.makedirs(args.save_dir, exist_ok=True)
 	return args
 
