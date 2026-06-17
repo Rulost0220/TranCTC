@@ -2,13 +2,6 @@
 
 This repository provides a Transformer-based workflow for Network Covert Timing Channel (NCTC) detection, including traffic preprocessing, NCTC interval generation, detection-flow construction, model training, and detection evaluation.
 
-### Dataset
-
-The raw traffic data used in this work comes from the CAIDA passive traffic dataset catalog:
-
-https://www.caida.org/catalog/datasets/passive_dataset
-
-The full traffic dataset can be obtained from the link above.
 
 ### Environment
 
